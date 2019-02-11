@@ -7,8 +7,8 @@ namespace KeyValueStore.Cmd.Commands
 {
     public class CommandLineParser : ICommandLineParser
     {
-        private static readonly string[] VALID_VERBS = { "help", "dump", "set", "get", "gettoclip", "delete" };
-        private const string VERB_NOT_FOUND_MESSAGE = "Verb not found. Valid verbs are help, dump, set, get, gettoclip, delete.";
+        private static readonly string[] VALID_VERBS = { "help", "dump", "set", "get", "delete" };
+        private const string VERB_NOT_FOUND_MESSAGE = "Verb not found. Valid verbs are help, dump, set, get, delete.";
 
         private readonly IDictionaryDeserializer _deserializer;
         private readonly IDictionarySerializer _serializer;

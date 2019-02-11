@@ -9,10 +9,10 @@ namespace KeyValueStore.Cmd
     class Program
     {
         private const int SUCCEEDED = 0;
-        private const int COULD_NOT_PARSE_COMMAND = 1;
-        private const int STORE_FILE_NOT_FOUND = 2;
-        private const int KEY_NOT_FOUND = 3;
-        private const int UNKNOWN_ERROR = 100;
+        private const int UNKNOWN_ERROR = 1;
+        private const int COULD_NOT_PARSE_COMMAND = 2;
+        private const int STORE_FILE_NOT_FOUND = 3;
+        private const int KEY_NOT_FOUND = 4;
 
         [STAThread]
         static int Main(string[] args)

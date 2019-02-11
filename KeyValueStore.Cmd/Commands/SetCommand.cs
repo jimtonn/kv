@@ -29,7 +29,7 @@ namespace KeyValueStore.Cmd.Commands
 
             if (!File.Exists(_storeFile))
             {
-                File.Create(_storeFile);
+                using (File.Create(_storeFile)) { }
             }
 
             using (var fs = new FileStream(_storeFile, FileMode.Open))
@@ -37,6 +37,7 @@ namespace KeyValueStore.Cmd.Commands
                dictionary = _deserializer.FullDeserialize(fs);
             }
             dictionary[_key] = _value;
+
             using (var fs = new FileStream(_storeFile, FileMode.Create))
             {
                 _serializer.Serialize(dictionary, fs);

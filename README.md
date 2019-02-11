@@ -15,7 +15,7 @@ For [AutoHotKey](https://www.autohotkey.com/), or batch files. If you write a lo
 For example, you could load some data into a store from the command line like this
 ```
 kv set websites.myfavoritewebsite.username noone@nowhere.com
-kv set websites.myfavoritewebsite.password pa@ssword
+kv set websites.myfavoritewebsite.password p@$$word
 ```
 
 Then create an AHK script like this:

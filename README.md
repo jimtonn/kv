@@ -5,7 +5,7 @@ kv is a Windows command-line utility for persisting data to disk and abstracting
 ## Examples
 `kv set mykey myvalue` *sets the value for "mykey" to "myvalue"*
 
-`kv get myvalue` *sends the current value for "mykey" to the standard output`
+`kv get myvalue` *gets the current value for "mykey" and outputs it to the standard output*
 
 `kv dump` *lists all keys and values in the store*
 

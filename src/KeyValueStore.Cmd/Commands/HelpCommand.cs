@@ -13,6 +13,7 @@ namespace KeyValueStore.Cmd.Commands
 
         public void Execute()
         {
+            _console.WriteLine("kv 1.0");
             _console.WriteLine("General usage:");
             _console.WriteLine("  kv <path to store file> <verb> <additional parameters>");
             _console.WriteLine(@"E.g. to set a value in the default store (current folder\kvstore.txt):");

@@ -58,8 +58,6 @@ namespace KeyValueStore.Cmd.Commands
                     return new SetCommand(_deserializer, _serializer, file, remainingArgs);
                 case "get":
                     return new GetCommand(_deserializer, _console, file, remainingArgs);
-                case "gettoclip":
-                    return new GetToClipCommand(_deserializer, file, remainingArgs);
                 case "delete":
                     return new DeleteCommand(_deserializer, _serializer, file, remainingArgs);
                 case "help":

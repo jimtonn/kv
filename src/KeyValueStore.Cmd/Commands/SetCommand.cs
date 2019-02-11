@@ -20,7 +20,6 @@ namespace KeyValueStore.Cmd.Commands
             _storeFile = storeFile;
             _key = args[0];
             _value = args[1];
-            //todo if value is not given here, maybe accept it from con.in
         }
 
         public void Execute()

@@ -1,3 +1,16 @@
+; Simple usage:
+; #Include kv.ahk
+; kv = new kv()
+; kv.Set("mykey", "myvalue")
+; myvariable = kv.Get("mykey")
+; MsgBox %myvariable% ; "myvalue"
+; The above will assume that kv.exe is in the launch directory, which, depending on how you start ahk, could be the folder
+; where ahk.exe lives. This will create a store called kvstore.txt in the same folder.
+; You can also provide a specific path to the executable, like this:
+; kv = new kv("c:\utils\kv.exe")
+; You can also provide a path for the store file, like this:
+; kv = new kv("", "C:\temp\ahkdata.txt")
+
 Class kv
 {
 	__New(PathToKv:="kv.exe", PathToStoreFile:="")

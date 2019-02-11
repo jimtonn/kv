@@ -49,7 +49,6 @@
     <Compile Include="Commands\CommandLineParser.cs" />
     <Compile Include="Commands\GetCommand.cs" />
     <Compile Include="Commands\DeleteCommand.cs" />
-    <Compile Include="Commands\GetToClipCommand.cs" />
     <Compile Include="Commands\HelpCommand.cs" />
     <Compile Include="Commands\SetCommand.cs" />
     <Compile Include="Commands\DumpCommand.cs" />

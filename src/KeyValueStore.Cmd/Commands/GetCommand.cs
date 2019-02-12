@@ -30,7 +30,7 @@ namespace KeyValueStore.Cmd.Commands
         {
             using (var fs = new FileStream(_file, FileMode.Open))
             {
-               _console.WriteLine(_deserializer.GetSingleValue(fs, _key));
+               _console.Write(_deserializer.GetSingleValue(fs, _key));
             }
         }
     }

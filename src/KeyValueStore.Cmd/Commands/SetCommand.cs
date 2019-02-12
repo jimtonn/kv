@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using KeyValueStore.Cmd.Exceptions;
 using KeyValueStore.Cmd.Interfaces;
 
 namespace KeyValueStore.Cmd.Commands
@@ -13,13 +14,24 @@ namespace KeyValueStore.Cmd.Commands
         private readonly string _key;
         private readonly string _value;
 
-        public SetCommand(IDictionaryDeserializer deserializer, IDictionarySerializer serializer, string storeFile, string[] args)
+        public SetCommand(IDictionaryDeserializer deserializer, IDictionarySerializer serializer, string storeFile, string[] remainingArgs)
         {
             _deserializer = deserializer;
             _serializer = serializer;
             _storeFile = storeFile;
-            _key = args[0];
-            _value = args[1];
+
+            if (remainingArgs.Length == 0)
+            {
+                throw new CommandParseException("Key not provided.");
+            }
+
+            if (remainingArgs.Length < 2)
+            {
+                throw new CommandParseException("Value not provided.");
+            }
+
+            _key = remainingArgs[0];
+            _value = remainingArgs[1];
         }
 
         public void Execute()

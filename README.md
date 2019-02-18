@@ -13,7 +13,7 @@ kv is a Windows command-line utility for persisting data to disk and abstracting
 
 `kv delete mykey` *removes a key (and value) from a store*
 
-A store is a text file that is created either in the folder where you run kv (kvstore.txt by default) or at a location you specify. They are generally human-readable, but values are stored in Base64 so they can contain special characters linebreaks.
+A store is a text file that is created either in the folder where you run kv (kvstore.txt by default) or at a location you specify. They are generally human-readable, but values are stored in Base64 so they can contain special characters or linebreaks.
 
 ## Why would anyone need this?
 For [AutoHotKey](https://www.autohotkey.com/), or batch files. If you write a lot of AHK scripts, you've probably encountered a situation where you want to send a password somewhere, but it's unpleasant to embed the password value directly in your script. You also might want to share the same information across multiple scripts. Using the [kv.ahk](https://github.com/jimtonn/kv/blob/master/AHK/kv.ahk) include, you can easily pull values from kv into your AHK scripts.
